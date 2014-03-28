@@ -1,1 +1,0 @@
-coffee --compile --watch test02.coffee
