@@ -1,0 +1,154 @@
+@charset "utf-8";
+
+/* ===========================================================
+
+   [Setting] 
+
+=========================================================== */
+
+/* -----------------------------------------------------------
+    01. Default Style Reset
+----------------------------------------------------------- */
+html,body,
+div,span,
+object,iframe,
+h1,h2,h3,h4,h5,h6,
+p,blockquote,pre,
+a,abbr,acronym,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,strong,sub,sup,tt,var,
+ul,ol,li,dl,dt,dd,
+form,fieldset,legend,label,figure,
+table,caption,tbody,tfoot,thead,tr,th,td,
+header,main,article,section,nav,footer{
+margin:0;
+padding:0;
+}
+
+header,nav,footer{
+display:block;
+}
+
+h1,h2,h3,h4,h5{
+font-size:100%;
+font-weight:bold;
+}
+
+img{
+border:none;
+vertical-align:bottom;
+}
+
+em,
+strong{
+font-style:normal;
+font-weight:normal;
+text-align:left;
+}
+
+table{
+border:none;
+border-spacing:0;
+font-size:100%;
+}
+
+th,
+td{
+border:none;
+border-spacing:0;
+vertical-align:top;
+}
+
+caption,
+th{
+font-weight:normal;
+text-align:left;
+}
+
+ul,
+ol,
+dl{
+list-style:none;
+}
+
+input,
+select,
+textarea{
+vertical-align:middle;
+}
+
+hr{
+display:none;
+}
+
+
+/* -----------------------------------------------------------
+    02. Basic Style
+----------------------------------------------------------- */
+html{
+font-size: 100%;
+overflow-y:scroll;
+}
+
+body{
+color:#333333;
+@include fontsize(16);
+overflow:hidden;
+}
+
+body,
+input,
+select,
+button,
+textarea{
+font-family:"メイリオ", "ＭＳ Ｐゴシック", "MS PGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", sans-serif;
+}
+
+a:link{
+color:#0066cc;
+text-decoration:none;
+}
+
+a:visited{
+color:#660066;
+text-decoration:none;
+}
+
+a:hover,
+a:active,
+a:focus{
+color:#0099cc;
+text-decoration:underline;
+}
+
+p, ul li, ol li, dl dt, dl dd,
+caption, th, td,
+input, option, textarea{
+line-height:1.5;
+}
+
+p, ul, ol, dl, table{
+margin-bottom:10px;
+@include fontsize(16);
+}
+
+li p,
+li ul,
+li ol{
+margin-bottom:0;
+}
+
+strong{
+font-weight:bold;
+}
+
+em{
+font-weight:bold;
+}
+
+small{
+font-size:0.83em;
+}
+
+input[type="checkbox"]:checked + * {
+	opacity:0.7;
+	background-color:#ffffff;
+}

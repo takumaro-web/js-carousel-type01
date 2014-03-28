@@ -1,0 +1,305 @@
+@charset "UTF-8";
+                             /*
+$sprites: sprite-map("sprites/*.png");
+$sprites-img:sprite-url($sprites);
+
+@mixin sprite-background($name) {
+background-image: $sprites;
+background-repeat: no-repeat;
+overflow: hidden;
+content: "";
+position: absolute;
+display: block;
+height: image-height(sprite-file($sprites, $name)) / 2;
+width: image-width(sprite-file($sprites, $name)) / 2;
+$ypos: round(nth(sprite-position($sprites, $name), 2) / 2);
+background-position: 0 $ypos;
+@include background-size(39px auto);
+}
+
+@mixin sprite-background-ajust($name) {
+background-image: $sprites;
+background-repeat: no-repeat;
+$ypos: round(nth(sprite-position($sprites, $name), 2) / 2);
+background-position: 0 $ypos;
+@include background-size(39px auto);
+}
+
+*/
+/* ===========================================================
+
+   [Setting] 
+
+=========================================================== */
+/* -----------------------------------------------------------
+    01. Default Style Reset
+----------------------------------------------------------- */
+html, body,
+div, span,
+object, iframe,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+a, abbr, acronym, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, strong, sub, sup, tt, var,
+ul, ol, li, dl, dt, dd,
+form, fieldset, legend, label, figure,
+table, caption, tbody, tfoot, thead, tr, th, td,
+header, main, article, section, nav, footer {
+  margin: 0;
+  padding: 0;
+}
+
+header, nav, footer {
+  display: block;
+}
+
+h1, h2, h3, h4, h5 {
+  font-size: 100%;
+  font-weight: bold;
+}
+
+img {
+  border: none;
+  vertical-align: bottom;
+}
+
+em,
+strong {
+  font-style: normal;
+  font-weight: normal;
+  text-align: left;
+}
+
+table {
+  border: none;
+  border-spacing: 0;
+  font-size: 100%;
+}
+
+th,
+td {
+  border: none;
+  border-spacing: 0;
+  vertical-align: top;
+}
+
+caption,
+th {
+  font-weight: normal;
+  text-align: left;
+}
+
+ul,
+ol,
+dl {
+  list-style: none;
+}
+
+input,
+select,
+textarea {
+  vertical-align: middle;
+}
+
+hr {
+  display: none;
+}
+
+/* -----------------------------------------------------------
+    02. Basic Style
+----------------------------------------------------------- */
+html {
+  font-size: 100%;
+  overflow-y: scroll;
+}
+
+body {
+  color: #333333;
+  font-size: 16px;
+  font-size: 1rem;
+  overflow: hidden;
+}
+
+body,
+input,
+select,
+button,
+textarea {
+  font-family: "メイリオ", "ＭＳ Ｐゴシック", "MS PGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", sans-serif;
+}
+
+a:link {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #660066;
+  text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: #0099cc;
+  text-decoration: underline;
+}
+
+p, ul li, ol li, dl dt, dl dd,
+caption, th, td,
+input, option, textarea {
+  line-height: 1.5;
+}
+
+p, ul, ol, dl, table {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+li p,
+li ul,
+li ol {
+  margin-bottom: 0;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-weight: bold;
+}
+
+small {
+  font-size: 0.83em;
+}
+
+input[type="checkbox"]:checked + * {
+  opacity: 0.7;
+  background-color: #ffffff;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+span.type-01 {
+  color: #ffffff;
+  font-size: 34px;
+  background: #C60019;
+  -webkit-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  transform: rotate(10deg);
+  display: inline-block;
+  font-size: 34px;
+  line-height: 1.1;
+  padding: 2px 3px;
+  -webkit-box-shadow: 4px 4px #000;
+  box-shadow: 4px 4px #000;
+  margin-right: 5px;
+}
+
+span.type-02 {
+  color: #fff;
+  background: #000;
+  -webkit-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+  display: inline-block;
+  font-size: 24px;
+  line-height: 1.1;
+  padding: 2px 3px;
+  -webkit-box-shadow: 4px 4px #C60019;
+  box-shadow: 4px 4px #C60019;
+  margin-right: 5px;
+}
+
+span.type-03 {
+  color: #ffffff;
+  background: #C60019;
+  -webkit-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  transform: rotate(2deg);
+  display: inline-block;
+  font-size: 32px;
+  line-height: 1.1;
+  padding: 2px 3px;
+  -webkit-box-shadow: 4px 4px #000;
+  box-shadow: 4px 4px #000;
+  margin-right: 5px;
+}
+
+span.type-04 {
+  color: #000;
+  background: #fff;
+  -webkit-transform: rotate(8deg);
+  -ms-transform: rotate(8deg);
+  transform: rotate(8deg);
+  display: inline-block;
+  font-size: 36px;
+  line-height: 1.1;
+  padding: 2px 3px;
+  -webkit-box-shadow: 4px 4px #C60019;
+  box-shadow: 4px 4px #C60019;
+  margin-right: 5px;
+}
+
+main {
+  width: 688px;
+  margin: 0 auto;
+}
+
+#box-mainvisual {
+  min-width: 688px;
+  width: 688px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+#list-main-visual {
+  overflow: hidden;
+  height: 230px;
+  position: relative;
+}
+
+#list-main-visual li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+#list-main-visual li.active {
+  z-index: 3;
+}
+#list-main-visual li.active-after {
+  z-index: 2;
+}
+
+#nav-carousel-01 {
+  z-index: 4;
+  position: absolute;
+  bottom: -2px;
+  *bottom: 8px;
+  right: 10px;
+}
+#nav-carousel-01 li {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  margin-right: 5px;
+}
+#nav-carousel-01 li a {
+  background: url("../images/bg-normal.gif");
+  width: 14px;
+  height: 14px;
+  display: block;
+  cursor: pointer;
+  text-indent: -9999px;
+}
+#nav-carousel-01 li a.current {
+  background: url("../images/bg-active.gif");
+  cursor: pointer;
+  display: block;
+  color: #fff;
+}

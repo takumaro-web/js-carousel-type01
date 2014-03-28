@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+//-----import Sass File---------
+
+@import "_mixin";
+
+@import "_set";
+
+h1 {
+	margin-bottom: 30px;
+}
+
+span.type-01 {
+  color: #ffffff;
+  font-size: 34px;
+  background: #C60019;
+  transform: rotate(10deg);
+  display: inline-block;
+  font-size: 34px;
+  line-height: 1.1;
+  padding: 2px 3px;
+  box-shadow: 4px 4px #000;
+  margin-right: 5px;
+}
+
+span.type-02 {
+  color: #fff;
+  background: #000;
+  transform: rotate(-5deg);
+  display: inline-block;
+  font-size: 24px;
+  line-height: 1.1;
+  padding: 2px 3px;
+  box-shadow: 4px 4px #C60019;
+  margin-right: 5px;
+}
+
+span.type-03 {
+  color: #ffffff;
+  background: #C60019;
+  transform: rotate(2deg);
+  display: inline-block;
+  font-size: 32px;
+  line-height: 1.1;
+  padding: 2px 3px;
+  box-shadow: 4px 4px #000;
+  margin-right: 5px;
+}
+
+span.type-04 {
+  color: #000;
+  background: #fff;
+  transform: rotate(8deg);
+  display: inline-block;
+  font-size: 36px;
+  line-height: 1.1;
+  padding: 2px 3px;
+  box-shadow: 4px 4px #C60019;
+  margin-right: 5px;
+}
+
+
+main{
+	width: 688px;
+	margin: 0 auto;
+}
+
+#box-mainvisual {
+	min-width: 688px;
+	width: 688px;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+}
+
+#list-main-visual{
+	overflow: hidden;
+	height: 230px;
+	position: relative;
+}
+
+#list-main-visual {
+	li {
+		position: absolute;
+		top:0;
+		left: 0;
+		z-index: 1; 
+	}
+	li.active {
+		z-index:3;
+	}
+
+	li.active-after {
+    	z-index:2;
+	}	
+}
+
+#nav-carousel-01 {
+	z-index: 4;
+	position: absolute;
+	bottom: -2px;
+	*bottom: 8px;
+	right: 10px;
+	li{
+		display: inline-block;
+		*display: inline;  
+    	*zoom: 1;
+		margin-right: 5px;
+	}
+	li a {
+		background: url("../images/bg-normal.gif");
+		width: 14px;
+		height: 14px;
+		display: block;
+		cursor: pointer;
+		text-indent: -9999px;
+	}
+	li a.current {
+		background: url("../images/bg-active.gif");
+		cursor: pointer;
+		display: block;
+		color: #fff;
+	}
+}
